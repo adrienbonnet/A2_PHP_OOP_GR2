@@ -9,7 +9,7 @@ use Cartman\Init\Pokemon\PokemonPlant;
 
 $pokemonFire = new PokemonFire();
 $pokemonFire
-    ->setName('Salamèche')
+    ->setName('Salameche')
     ->setHP(100)
 ;
 
@@ -46,7 +46,7 @@ echo '<h1>'.$striker->getName().' VS '.$goal->getName().'</h1>';
  * Logic
  */
 while (false === $matchOver) {
-    echo '<h2>Round n°'.$roundNumber.'</h2>';
+    echo '<h2>Round n\''.$roundNumber.'</h2>';
 
     $attackNumber = mt_rand(1, 3);
 
@@ -61,7 +61,7 @@ while (false === $matchOver) {
 
         $goal->removeHP((int)$attackValue);
 
-        echo '<h3>'.$striker->getName().' attacks '.$goal->getName().'. Attack n°'.($i+1).' on '.$attackNumber.' '.$attackValue.' HP removed. '.$goal->getName().' have '.$goal->getHP().'HP left</h3>';
+        echo '<h3>'.$striker->getName().' attacks '.$goal->getName().'. Attack n\''.($i+1).' on '.$attackNumber.' '.$attackValue.' HP removed. '.$goal->getName().' have '.$goal->getHP().'HP left</h3>';
 
         if (0 === $goal->getHP()) {
             $matchOver = true;
